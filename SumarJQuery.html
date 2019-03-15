@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Sumar JQUERY</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h1 id="header">JAVASCRIPT CON FRAMEWORK</h1>
+    <form>
+      <h3>Digite dos N&uacutemeros</h3>
+        <label for="">Numero 1:</label>
+        <input type="text" id="num1">
+        <br><br>
+        <label for="">Numero 2:</label>
+        <input type="text" id="num2">
+        <br><br>
+        <input type="button" id="sumarButton" value="Sumar">
+        <input type="button" id="nuevoButton" value="Limpiar">
+        <h5 id="footer"></h5>
+    </form>
+
+    <script>
+      $('#sumarButton').on('click', function(e) {
+        var n1 = $("#num1").val();
+        var n2 = $("#num2").val();
+        var suma = parseInt(n1) + parseInt(n2);
+        $("#footer").value("El resulado es: " + suma);
+      });
+    </script>
+    <script>
+      $('#nuevoButton').on('click', function(e) {
+          $("#num1").value("");
+          $("#num2").value(""); 
+      });
+    </script>
+  </body>
+</html>
